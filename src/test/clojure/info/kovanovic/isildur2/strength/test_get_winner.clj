@@ -8,7 +8,7 @@
 	loosing-cards (create-cards looser)
 	winning-hand (get-hand winning-cards)
 	loosing-hand (get-hand loosing-cards)
-	winner (get-winner winning-cards loosing-cards)]
+	winner (nth (get-winner winning-cards loosing-cards) 1)]
     (is (= (:type winning-hand) hand-type))
     (is (= (:hand-cards winning-hand)
 	   (take 5 winning-cards)))
