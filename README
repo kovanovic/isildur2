@@ -1,0 +1,30 @@
+this is the odds calculator for texas hol'em poker.
+It is written in clojure and currently it has only repl interface.
+
+The main functionality is to calculate the matchups between two hold'em hands
+and you can do that by calling
+
+(use 'info.kovanovic.isildur2.get-odds)
+to use the isildur2 library
+
+After that you can call 
+(get-odds "hand1" "hand2")
+or
+(get-odds "hand1" "hand2" "board")
+
+to receive the odds for winning the hand.
+
+If you call the first version 
+the whole board(5 cards) will be dealt.
+
+if you call the second version the remaining number of cards will be dealt.
+So for instance lets suppose you called it something like
+(get-odds "Ad As" "Qd Qs" "2h 3d 5s")
+only last two cards(turn and the river) will be dealt because first three cards(flop) are already dealt.
+
+The names of the cards are in standard poker convention so the ranks are from 2-9 T J Q K A
+and the abbreviations for suits are s(spades) d(diamonds) c(clubs) h(hearts).
+
+I hope you will enjoy it. :)
+
+Vita
